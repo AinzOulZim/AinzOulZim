@@ -4,25 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace Задание_из_лыбы_2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            double f, a;
+            int a, c, g;
+            Console.WriteLine("Введите прошедшее время в секунда");
+            a = Convert.ToInt32(Console.ReadLine());
+            if (a >= 0)
+            {
+                g = a / 3600;
+                int f = (int)g;
+                c = (a - (f * 3600)) / 60;
+                Console.WriteLine($"Прошло {g} часов и {c} минут");
+            }
 
-            Console.WriteLine("Введите дробное число (число с точкой ) ");
-            f = double.Parse(Console.ReadLine());
-            int c = (int)f;
-            a = (c - f) * 10;
-            a = (int)a;
-            Console.WriteLine(a);
-            Console.ReadLine();
-
-
-
-
+            else
+            {
+                Console.WriteLine("Ошибка");
+            }
 
 
 
